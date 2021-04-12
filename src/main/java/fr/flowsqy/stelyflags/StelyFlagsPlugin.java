@@ -1,4 +1,4 @@
-package fr.floswqy.stelyflags;
+package fr.flowsqy.stelyflags;
 
 import com.sk89q.worldguard.WorldGuard;
 import org.bukkit.Bukkit;
@@ -16,5 +16,10 @@ public class StelyFlagsPlugin extends JavaPlugin {
             getLogger().log(Level.SEVERE, "Can not load flags, disable the plugin", exception);
             Bukkit.getPluginManager().disablePlugin(this);
         }
+    }
+
+    @Override
+    public void onEnable() {
+        new VillagerInteractListener(this);
     }
 }

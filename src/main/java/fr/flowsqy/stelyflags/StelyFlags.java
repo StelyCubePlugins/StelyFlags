@@ -1,4 +1,4 @@
-package fr.floswqy.stelyflags;
+package fr.flowsqy.stelyflags;
 
 import com.sk89q.worldguard.protection.flags.Flag;
 import com.sk89q.worldguard.protection.flags.StateFlag;
