@@ -11,15 +11,15 @@ public class StelyFlags {
 
     public static void load(FlagRegistry flagRegistry) {
         if (SPAWN_SPAWNER == null)
-            SPAWN_SPAWNER = registerFlag(flagRegistry, "spawn-spawner");
+            SPAWN_SPAWNER = registerFlag(flagRegistry, "spawn-spawner", true);
         if (INTERACT_VILLAGER == null)
-            INTERACT_VILLAGER = registerFlag(flagRegistry, "interact-villager");
+            INTERACT_VILLAGER = registerFlag(flagRegistry, "interact-villager", false);
     }
 
-    private static StateFlag registerFlag(FlagRegistry flagRegistry, String flagName) {
+    private static StateFlag registerFlag(FlagRegistry flagRegistry, String flagName, boolean defaultValue) {
         final Flag<?> flag = flagRegistry.get(flagName);
         if (flag == null) {
-            final StateFlag finalFlag = new StateFlag(flagName, false);
+            final StateFlag finalFlag = new StateFlag(flagName, defaultValue);
             flagRegistry.register(finalFlag);
             return finalFlag;
         }
