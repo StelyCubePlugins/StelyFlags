@@ -1,6 +1,8 @@
 package fr.flowsqy.stelyflags;
 
 import com.sk89q.worldguard.WorldGuard;
+import fr.flowsqy.stelyflags.listeners.SpawnerSpawnListener;
+import fr.flowsqy.stelyflags.listeners.VillagerInteractListener;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -21,5 +23,6 @@ public class StelyFlagsPlugin extends JavaPlugin {
     @Override
     public void onEnable() {
         new VillagerInteractListener(this);
+        new SpawnerSpawnListener(this);
     }
 }
