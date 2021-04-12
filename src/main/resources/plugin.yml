@@ -1,0 +1,5 @@
+name: StelyFlags
+author: Flowsqy
+version: ${project.version}
+main: fr.floswqy.stelyflags.StelyFlagsPlugin
+api-version: "1.13"
